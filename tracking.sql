@@ -1,6 +1,7 @@
 --tabla para el seguimiento de las extracciones. Firebird / Interbase
 create table tracking
 (
+  username varchar(250) not null,
   firstname varchar(250) not null,
   lastname varchar(250) not null,
   email varchar(250) not null,
@@ -14,6 +15,7 @@ create table tracking
 
 insert into tracking
 (
+  username,
   firstname,
   lastname,
   email,
@@ -23,6 +25,7 @@ insert into tracking
   created
 ) values
 (
+  'username',
   'firstname',
   'lastname',
   'email',
