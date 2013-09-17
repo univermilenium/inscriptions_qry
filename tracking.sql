@@ -34,3 +34,14 @@ insert into tracking
   1,
   'NOW'	
 );
+
+
+--connectionstrings
+
+--Firebird
+--ServerType=0;User=SYSDBA;Password=masterkey;Size=4096;Dialect=3;Pooling=FALSE;database=localhost:C:\\Users\\ELEARNING\\Desktop\\extracciones\\TRACKING.GDB
+
+
+--Access
+--Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\ELEARNING\\Desktop\\extracciones\\tracking.accdb
+
