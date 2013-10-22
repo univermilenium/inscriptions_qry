@@ -1,0 +1,40 @@
+attributetype ( 2.5.7.2 
+	NAME 'name' 
+	DESC 'Nombre de usuario.' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{100} 
+	SINGLE-VALUE 
+ )
+
+attributetype ( 2.5.7.3 
+	NAME 'lastname' 
+	DESC 'Apellido Paterno' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{100} 
+ )
+
+attributetype ( 2.5.7.4 
+	NAME 'lastsname2' 
+	DESC 'Apellido Materno' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 
+ )
+
+attributetype ( 2.5.7.5 
+	NAME 'period' 
+	DESC 'Periodo Escolar' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{100} 
+ )
+
+attributetype ( 2.5.7.6 
+	NAME 'status' 
+	DESC 'Estatus de la cuenta (activo-inactivo)' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{1} 
+ )
+
+objectclass ( 2.5.7.1 
+	NAME 'univerperson' 
+	DESC 'objectClass para UniverMilenium' 
+	SUP inetOrgPerson 
+	STRUCTURAL 
+	MUST ( o $ cn $ userPassword $ sn $ email $ status $ name $ lastname $ lastsname2 ) 
+	MAY displayName 
+ )
+
