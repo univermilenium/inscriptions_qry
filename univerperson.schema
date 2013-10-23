@@ -1,27 +1,31 @@
 attributetype ( 1.1.1.1 
 	NAME 'univername' 
 	DESC 'Nombre del usuario Univer' 
-	SYNTAX 1.3.6.1.4.1.1466.115.121.1.45 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
  )
 
 attributetype ( 1.1.1.2 
 	NAME 'univerlastname' 
 	DESC 'Apellido paterno del usuario Univer' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
  )
 
 attributetype ( 1.1.1.3 
 	NAME 'univerlastname2' 
 	DESC 'Apellido materno para el usuario Univer' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
  )
 
 attributetype ( 1.1.1.4 
 	NAME 'period' 
 	DESC 'Periodo escolar' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
  )
 
 attributetype ( 1.1.1.5 
 	NAME 'status' 
-	DESC 'Estatus del usuario Univer (activo-inactivo)' 
+	DESC 'Estatus del usuario Univer (true-false)' 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.7 
  )
 
 objectclass ( 1.1.1.6 
