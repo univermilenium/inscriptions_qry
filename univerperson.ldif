@@ -1,0 +1,43 @@
+dn: cn=univerperson,cn=schema,cn=config
+objectClass: olcSchemaConfig
+cn: univerperson
+olcAttributeTypes: ( 2.5.7.2
+  
+  NAME 'univername' 
+  DESC 'Nombre del usuario.' 
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{100} 
+  SINGLE-VALUE 
+  )
+olcAttributeTypes: ( 2.5.7.3
+  
+  NAME 'univerlastname' 
+  DESC 'Apellido Paterno' 
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{100} 
+  )
+olcAttributeTypes: ( 2.5.7.4
+  
+  NAME 'univerlastname2' 
+  DESC 'Apellido Materno' 
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 
+  )
+olcAttributeTypes: ( 2.5.7.5
+  
+  NAME 'period' 
+  DESC 'Periodo Escolar' 
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{100} 
+  )
+olcAttributeTypes: ( 2.5.7.6
+  
+  NAME 'status' 
+  DESC 'Estatus de la cuenta (activo-inactivo)' 
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{1} 
+  )
+olcObjectClasses: ( 2.5.7.1
+  
+  NAME 'univerperson' 
+  DESC 'objectClass para UniverMilenium' 
+  SUP inetOrgPerson 
+  STRUCTURAL 
+  MUST ( o $ cn $ userPassword $ sn $ email $ status $ univername $ univerlastname $ univerlastname2 ) 
+  MAY displayName 
+  )
